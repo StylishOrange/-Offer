@@ -1,0 +1,16 @@
+//暴力解法
+public class Solution {
+    public int findRepeatNumber(int[] nums) 
+    {
+        int i,j;
+        for (i=0;i<nums.length;i++)
+            for (j=i+1;j<nums.length;j++)
+                {
+                    if (nums[i]==nums[j])
+                    return nums[i];
+                }
+        return -1;
+    }
+}
+
+

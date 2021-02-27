@@ -13,4 +13,48 @@ public class Solution {
     }
 }
 
+//排序
+class Solution {
+    public int findRepeatNumber(int[] nums) {
+        Arrays.sort(nums);
+        for (int i=0;i<nums.length-1;i++)
+            {
+                if (nums[i]==nums[i+1])
+                    return nums[i];
+            }
+        return -1;
+    }
+}
+
+//哈希
+class Solution {
+    public int findRepeatNumber(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+            for (int i:nums)
+                {
+                    if (set.contains(i))
+                        return i;
+                    set.add(i);
+                }
+        return -1;
+    }
+}
+
+//原地置换
+class Solution {
+    public int findRepeatNumber(int[] nums) {
+        for(int i = 0; i < nums.length; i++){
+            while(nums[i] != i){
+                if(nums[nums[i]] == nums[i]){
+                    return nums[i];
+                }
+                int temp = nums[nums[i]];
+            nums[nums[i]] = nums[i];
+            nums[i] = temp;
+            }
+        }
+        return -1;
+    }
+}
+
 

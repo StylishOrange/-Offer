@@ -13,4 +13,5 @@ class Solution {
     }
  }
  
- //和C、C++不一样，java的字符串不可变..
+ //和C、C++不一样，java的字符串不可变，学习了基本的字符串操作  s.length(),s.charAt(),StringBuilder类
+ 

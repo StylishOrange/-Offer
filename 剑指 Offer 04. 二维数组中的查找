@@ -1,0 +1,24 @@
+class Solution {
+    public boolean findNumberIn2DArray(int[][] matrix, int target) {
+            if(matrix.length == 0){
+            return false;
+        }
+
+        int rows=matrix.length; 
+        int column=matrix[0].length;
+        int i=0,j=column-1;
+        while(i<=rows-1 && j>=0)
+        {
+                if (matrix[i][j]==target)
+                    return true;
+                else if (matrix[i][j]<target)
+                    i++;
+                else 
+                    j--;
+        }
+        return false;
+    }       
+}
+
+
+//从右上看，BST
